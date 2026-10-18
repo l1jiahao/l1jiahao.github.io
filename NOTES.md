@@ -64,7 +64,42 @@ publisher: "IEEE"
 > `Sensors` 与 `Briefings in Bioinformatics` 的两篇给的 `bbae171` / `5179` 是**文章编号**，
 > 不是页码范围，所以用 `pub_post: ", Art. no. ..."` 而不是 `pages`。
 
-## 封面图
+
+## 封面：真实方法图
+
+4 篇论文的封面是从 **PDF 里提取的方法图**（不是出版商封面，无版权问题）：
+
+| 论文 | 来源 | 图 |
+|---|---|---|
+| SAVE | arXiv `2604.16776`（p3 Figure 1）| 完整框架图 |
+| Conditional causal representation learning | IJCAI proceedings（p3 Figure 1）| scConCRL 架构 |
+| stDiff | PMC11021815（Figure 1）| DDPM + 训练/推理流程 |
+| WSN node deployment | PMC9319457（Figure 3）| 六边形映射 → 算法 |
+
+合成规则：600×400 白底 + 细边框 + 底部信息条（会议名 · 年份），图像按 3:2 等比缩放不裁切。
+
+### 重新生成封面
+
+```bash
+python3 -m venv /tmp/venv && /tmp/venv/bin/pip install pymupdf Pillow
+/tmp/venv/bin/python scripts/make-cover.py paper.pdf \
+    --venue ICLR --year 2026 --out assets/images/covers/cover-save.png
+```
+
+不加 `--figure` 时会自动挑图注里含 framework / overview / architecture / pipeline 的那张。
+也可以 `--figure 1 --page 3` 精确定位。
+
+### 还差 3 篇
+
+| 论文 | 情况 |
+|---|---|
+| scDiformer (BIBM 2025) | IEEE 付费墙，arXiv 无预印本 |
+| Deep learning in GRN inference: a survey (TCBB 2024) | IEEE 付费墙，仅 PubMed 摘要 |
+| Short-time prediction of energetic electron flux (Space Weather 2022) | Wiley 标注开放获取，但 Cloudflare 拦所有 PDF 路径 |
+
+这三篇目前用生成的矢量封面占位。拿到 PDF 后跑一次上面的命令即可替换。
+
+## 早期占位封面（已被上面替换的部分）
 
 `assets/images/covers/` 下 7 个 SVG，每个 1.2KB。
 
