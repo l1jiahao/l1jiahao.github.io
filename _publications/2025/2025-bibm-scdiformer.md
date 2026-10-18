@@ -6,7 +6,7 @@ pub:            "IEEE International Conference on Bioinformatics and Biomedicine
 pub_date:       "2025"
 pages:           "493–498"
 publisher:           "IEEE"
-cover:          /assets/images/covers/scdiformer-bibm-2025.svg
+cover:          /assets/images/covers/cover-scdiformer.png
 authors:
   - Xinyue Gu
   - Jiayi Dong

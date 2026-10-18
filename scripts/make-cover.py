@@ -87,10 +87,14 @@ def crop_figure(doc, pno, cap_rect, pad=6):
     return page.get_pixmap(clip=rect, dpi=200)
 
 
-def make_cover(pix, out, venue, year):
+def make_cover(pix, out, venue, year, crop=None):
     fig_path = "/tmp/_figure_tmp.png"
     pix.save(fig_path)
     fig = Image.open(fig_path).convert("RGB")
+    if crop:
+        x0, y0, x1, y1 = crop
+        fig = fig.crop((int(fig.width * x0), int(fig.height * y0),
+                        int(fig.width * x1), int(fig.height * y1)))
 
     canvas = Image.new("RGB", (CANVAS_W, CANVAS_H), "white")
     d = ImageDraw.Draw(canvas)
@@ -122,6 +126,9 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--figure", type=int, default=None)
     ap.add_argument("--page", type=int, default=None, help="1-based，配合 --figure 精确定位")
+    ap.add_argument("--crop", default=None,
+                    help="裁切比例 x0,y0,x1,y1（0~1），宽幅图只取核心 panel 时用，"
+                         "例如 --crop 0.34,0,1,1")
     a = ap.parse_args()
 
     doc = pymupdf.open(a.pdf)
@@ -137,7 +144,11 @@ def main():
     print(f"\n选用: p{pno+1} Figure {num} — {cap[:70]}")
     pix = crop_figure(doc, pno, rect)
     print(f"裁剪: {pix.width}x{pix.height}px")
-    print("输出:", make_cover(pix, a.out, a.venue, a.year))
+    crop = None
+    if a.crop:
+        crop = tuple(float(x) for x in a.crop.split(","))
+        assert len(crop) == 4, "--crop 需要 4 个 0~1 的数"
+    print("输出:", make_cover(pix, a.out, a.venue, a.year, crop))
 
 
 if __name__ == "__main__":
