@@ -1,7 +1,9 @@
 # luost26/academic-homepage 版本
 
 基于 [luost26/academic-homepage](https://github.com/luost26/academic-homepage)（MIT）定制，
-目标仓库 `l1jiahao/l1jiahao.github.io`，构建方式为 **GitHub Pages 原生 Jekyll 构建**（无需 Actions）。
+仓库 `l1jiahao/l1jiahao.github.io`，**GitHub Pages 原生 Jekyll 构建**（无需 Actions）。
+
+已上线：https://l1jiahao.github.io
 
 ## 数据在哪
 
@@ -9,66 +11,52 @@
 |---|---|
 | 姓名 / 邮箱 / 职位 / 社交链接 | `_data/profile.yml` |
 | 个人简介段落 | `_data/profile.yml` → `short_bio` |
+| 学历 / 经历 / 获奖 | `_data/profile.yml` → `education` / `experience` / `awards` |
 | 首页显示哪些区块 | `_data/display.yml` |
 | 顶部导航 | `_data/navigation.yml` |
 | 作者加粗 / 主页链接 | `_data/authors.yml` |
 | 新增论文 | `_publications/<年份>/<日期>-<slug>.md` |
 | 新增动态 | `_news/<日期>-<slug>.md` |
 
-## 需要你替换 / 确认
+## 相对原模板的改动
+
+| 改动 | 原因 |
+|---|---|
+| 所有 CSS/JS/字体本地化到 `assets/lib/` | 原模板依赖 10 个海外 CDN，国内首屏慢 |
+| 目录名 `assets/vendor` → `assets/lib` | **模板 `.gitignore` 里有 `vendor/`（给 Bundler 用的），会把 `assets/vendor/` 整个忽略，文件根本不会进仓库** |
+| 移除 KaTeX | 页面没有 `$...$` 数学公式，省约 1MB |
+| 移除 academicons / github-buttons | 没有任何组件实际使用 |
+| 字体只保留 Lato + Source Code Pro 的 latin 子集 | 原来白加载 Fira Sans + 各语言子集（28 个 `@font-face` 砍到 9 个） |
+| 删除 `jekyll-email-protect` | 不在 GitHub Pages 白名单，未知 filter 被**静默跳过**，构建成功但加密失效 |
+| 新增 `assets/js/email.js` | 邮箱拆成 `data-email-user` / `data-email-domain`，页面加载后拼装 |
+| 新增 SEO 标签 | 原模板无 `description` / `og:*` / `canonical` |
+| 新增 `jekyll-sitemap` + `robots.txt` | 学术主页最需要被搜到 |
+| 删除 blog / showcase / 示例内容 | 不用，且会带来额外 CDN 引用 |
+
+## 待你确认 / 补全
 
 | 项 | 当前值 | 说明 |
 |---|---|---|
-| `positions` | `Fudan University` / `Shanghai, China` | 没有写具体头衔（PhD student 等），**请补** |
-| `short_bio` | 我根据你的仓库写的两段 | 必须按自己语气改写 |
-| 论文 `date` | `2026-09-01` | 只用于排序；实际接收月份请改成准确值 |
-| News 第 1 条日期 | `2026-09-01` | 同上 |
-| `gscholar` | 注释状态 | 填入 Scholar ID 后侧栏会出现图标 |
-| `orcid` / `cv_link` | 注释状态 | 有就填 |
-| `education` / `awards` | **未启用** | 见下 |
+| `Education.dept` | 空 | 专业名称未知，未填 |
+| `Education.date` | `2026` | 只知道已毕业；建议改成 `2023 – 2026` 这类区间 |
+| `Education.name` | Fudan University | 如果硕士不是复旦，务必改 |
+| 首页 About 两段 | 我按仓库内容写的 | **必须按自己语气改写** |
+| News 第 1 条日期 | `Sep 01` | 论文接收月份无依据，请核准 |
+| 论文封面 | 模板自动生成的彩色气泡图 | `sc-save` 仓库里没有任何图片，想放真图需你提供方法图 |
+| `gscholar` / `orcid` / `cv_link` | 注释状态 | 有就填，侧栏会多出对应图标 |
 
-### 为什么 education 没开
+## 本地调试（重要）
 
-`_data/display.yml` 里 `show_experience: false`。原因：
+本机 Ruby 是 2.6，`ffi` 要求 ≥3.0，**本地 `bundle exec jekyll serve` 跑不起来**。三个选择：
 
-1. 我不确定你的具体身份（博士/硕士/研究员）和入学年份
-2. 模板的 education 条目**必须有 logo 图片**，否则显示裂图
+1. 直接推到 GitHub，等 Pages 构建（约 40–60 秒），改完刷新页面
+2. `brew install ruby` 后在仓库内 `bundle install && bundle exec jekyll serve`
+3. 启动 Docker，用 `jekyll/jekyll` 镜像
 
-要启用：在 `_data/profile.yml` 补 `education:` 段落（`name` / `logo` / `position` / `date`），
-把 logo 图片放进 `assets/images/badges/`，再把 `show_experience` 改成 `true`。
+## 换主题 / 加功能时的注意
 
-## 关于 CDN（重要）
-
-这个模板从以下海外 CDN 加载资源：
-
-```
-cdnjs.cloudflare.com      Bootstrap / FontAwesome / academicons / jQuery
-fonts.googleapis.com      Lato / Fira Sans / Source Code Pro
-cdn.jsdelivr.net          KaTeX
-unpkg.com                masonry / imagesloaded
-```
-
-**国内访问 cdnjs 和 unpkg 经常很慢甚至超时**，首屏可能要几秒。如果在意，
-可以后续把 `_layouts/default.html` 里的这些 `<link>`/`<script>` 换成本地文件（约 1.2MB），
-代价是仓库变大、但加载稳定。要我做就说。
-
-## 部署
-
-```bash
-cd ~/Code/github_manager/site-luost26
-git init -b main && git add -A
-git commit -m "academic homepage"
-gh repo create l1jiahao/l1jiahao.github.io --public --source . --push
-```
-
-然后 Settings → Pages → Source 选 `Deploy from a branch` → `main` / `/`。
-
-> `_config.yml` 里 `baseurl` 必须是空字符串（用户站点在根路径）；
-> 如果是项目站点（`username.github.io/repo`），则要设成 `/repo`。
-
-## 构建失败的排查顺序
-
-1. 仓库 Settings → Pages 看报错
-2. Actions 标签页里 `pages-build-deployment` 的日志
-3. 常见原因：`_config.yml` 出现**不在 GitHub Pages 白名单**里的插件（本模板用的
-   `jekyll-email-protect` 实测可用；`jekyll-scholar` 之类不行）
+- 新增的 `_includes`、`_layouts` 里不要再写 CDN 链接，统一放 `assets/lib/` 并用
+  `{{ '/assets/lib/...' | relative_url }}`
+- `_config.yml` 的 `plugins` 只能是 GitHub Pages 白名单内的（`jekyll-sitemap`、
+  `jekyll-seo-tag`、`jekyll-feed` 等安全；`jekyll-scholar`、`jekyll-email-protect` 不行）
+- `_config.yml` 里 `baseurl` 必须为空（用户站点在根路径）；将来搬去做项目站点才改成 `/repo`
