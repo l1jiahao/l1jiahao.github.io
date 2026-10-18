@@ -8,7 +8,7 @@ volume:           "25"
 number:           "3"
 pub_post:       ", Art. no. bbae171"
 publisher:           "Oxford University Press"
-cover:          /assets/images/covers/stdiff-bib-2024.svg
+cover:          /assets/images/covers/cover-stdiff.png
 authors:
   - Kongming Li
   - Jiahao Li

@@ -7,7 +7,7 @@ pub_date:       "2022"
 volume:           "22"
 number:           "14"
 pub_post:       ", Art. no. 5179"
-cover:          /assets/images/covers/wsn-sensors-2022.svg
+cover:          /assets/images/covers/cover-wsn.png
 authors:
   - Jiahao Li
   - Yuhao Tao
