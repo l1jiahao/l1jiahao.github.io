@@ -1,0 +1,37 @@
+primary_name: "Li Jiahao"
+secondary_name: ""
+navbar_name: "Li Jiahao"
+
+positions:
+- name: Fudan University
+- name: Shanghai, China
+
+email: "argonli.ai@gmail.com"
+# cv_link: /assets/files/cv.pdf
+# gscholar: xFmQpf4AAAAJ        # 填入自己的 Google Scholar ID 后会显示图标
+github: l1jiahao
+# twitter: your_twitter_id
+# linkedin: your-linkedin-id
+# orcid: 0000-0000-0000-0000
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I work on <strong>generative models for scientific data</strong>. My current focus is
+    conditional single-cell generation — building generative frameworks that respect
+    biological structure rather than treating cells as unstructured vectors.
+  </p>
+  <p>
+    Before that I worked on computational physics: Martian atmospheric escape from MAVEN
+    observations, radiation-belt electron flux prediction on RBSP measurements, and
+    value-function approximation for wireless sensor networks. I also build developer
+    tooling, mostly in Swift.
+  </p>
+
+# 没有照片就先关掉；放照片时取消注释并把文件放到 assets/images/photos/
+# portrait_url: /assets/images/photos/portrait.jpg
+# portrait_caption: >-
+
+# ⚠️ education / experience / awards 需要真实信息才启用。
+#    启用前请先在 _data/display.yml 里把 show_experience 设为 true，
+#    并且每一项的 logo 必须是真实存在的图片路径，否则会显示裂图。

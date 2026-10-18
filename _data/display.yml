@@ -1,0 +1,9 @@
+homepage:
+  show_experience: false        # 需要教育/获奖信息时改为 true，并补全 _data/profile.yml
+  show_news: true
+  show_selected_publications: true
+  num_news: 10
+
+# 底部右侧文字。模板作者希望保留回链，建议留着。
+footer_text: >-
+  <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> academic-homepage</a>

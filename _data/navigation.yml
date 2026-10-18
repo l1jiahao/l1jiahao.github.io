@@ -1,0 +1,6 @@
+pages:
+# NOTE: `name` 必须与页面 front matter 里的 `navbar_title` 一致，否则导航高亮会错位
+- name: Home
+  url: /
+- name: Publications
+  url: /publications

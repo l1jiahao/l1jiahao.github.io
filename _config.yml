@@ -1,0 +1,25 @@
+# Site settings
+# Template: https://github.com/luost26/academic-homepage
+
+title: "Li Jiahao"
+description: "Li Jiahao — generative models for scientific data. Conditional single-cell generation, diffusion and discrete-token modeling. Fudan University."
+url: "https://l1jiahao.github.io"
+baseurl: ""   # user site lives at the domain root; must stay empty
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-email-protect
+  - jekyll-sitemap
+
+timezone: Asia/Shanghai
+
+collections:
+  - publications
+  - news
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - NOTES.md

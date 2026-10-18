@@ -1,0 +1,19 @@
+# 作者的加粗/链接配置。key 必须与 _publications 里的 authors 列表完全一致。
+"Jiahao Li":
+  bold: true
+  url: https://github.com/l1jiahao
+
+"Jiayi Dong":
+  bold: false
+
+"Peng Ye":
+  bold: false
+
+"Xiaochi Zhou":
+  bold: false
+
+"Haohai Lu":
+  bold: false
+
+"Fei Wang":
+  bold: false
