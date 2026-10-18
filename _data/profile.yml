@@ -17,26 +17,38 @@ github: l1jiahao
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I work on <strong>generative models for scientific data</strong>. My current focus is
-    conditional single-cell generation — building generative frameworks that respect
-    biological structure rather than treating cells as unstructured vectors.
+    I build <strong>generative models for scientific data</strong>, mostly single-cell biology.
+    My current work asks how to generate and forecast cells under conditions a model has never
+    seen: multi-condition generation with gene-block attention (SAVE, ICLR 2026), causal
+    representation learning for integrating heterogeneous scRNA-seq, and diffusion-based
+    imputation that recovers spatial context from dissociated cells (stDiff).
   </p>
   <p>
-    Before that I worked on computational physics: Martian atmospheric escape from MAVEN
-    observations, radiation-belt electron flux prediction on RBSP measurements, and
-    value-function approximation for wireless sensor networks. I also build developer
-    tooling, mostly in Swift.
+    What these share is a preference for <strong>structure over scale</strong>. Genes come in
+    coordinated blocks, cells sit in spatial neighbourhoods, and measurements unfold in time —
+    I would rather put that structure into the architecture than throw a bigger model at it.
+    That is also why I wrote a survey on deep learning for gene regulatory network inference
+    before building yet another network.
+  </p>
+  <p>
+    I started out on the physical side: short-time forecasting of radiation-belt electron flux
+    with stacked ensembles, and hexagon-based node deployment for wireless sensor networks —
+    both during my undergraduate years at <strong>Nanchang University</strong>. I completed my
+    M.S. at <strong>Fudan University</strong>, where I moved from forecasting physical fields
+    to modelling cellular ones.
   </p>
 
 # 没有照片就先关掉；放照片时取消注释并把文件放到 assets/images/photos/
 # portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-
 
-# ⚠️ education / experience / awards 需要真实信息才启用。
-#    每一项的 logo 必须是真实存在的图片路径，否则会显示裂图。
-#    ⚠️ 待核实：专业（dept）、起止年份，目前只写了毕业年份 2026
+# ⚠️ 仍待补：专业名称（dept）、南昌大学的起止年份
 education:
 - name: Fudan University
   logo: /assets/images/badges/education.svg
   position: M.S.
   date: 2026
+- name: Nanchang University
+  logo: /assets/images/badges/education.svg
+  position: B.S.
+  date: ""
