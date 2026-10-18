@@ -8,7 +8,7 @@ volume:           "21"
 number:           "6"
 pages:           "2089–2101"
 publisher:           "IEEE"
-cover:          /assets/images/covers/grn-survey-tcbb-2024.svg
+cover:          /assets/images/covers/cover-grn.png
 authors:
   - Jiayi Dong
   - Jiahao Li

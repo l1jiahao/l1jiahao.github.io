@@ -8,7 +8,7 @@ pub_date:       "2022"
 volume:           "20"
 number:           "2"
 publisher:           "Wiley"
-cover:          /assets/images/covers/spaceweather-2022.svg
+cover:          /assets/images/covers/cover-spaceweather.png
 authors:
   - Rongxin Tang
   - Yuhao Tao

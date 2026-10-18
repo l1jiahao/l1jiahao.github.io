@@ -68,8 +68,10 @@ def crop_figure(doc, pno, cap_rect, pad=6):
     boxes = [pymupdf.Rect(i["bbox"]) for i in page.get_image_info()]
     boxes += [d["rect"] for d in page.get_drawings()]
 
+    # 页眉区（期刊横幅、DOI、横线）不算图的一部分，排除掉
+    header_zone = H * 0.10
     cand = [b for b in boxes
-            if b.y1 <= cap_rect.y0 + 2 and b.y1 > 0
+            if b.y1 <= cap_rect.y0 + 2 and b.y1 > header_zone
             and b.width > 8 and b.height > 8
             and b.x0 >= left - 12 and b.x1 <= right + 12]
     if not cand:
