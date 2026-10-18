@@ -3,7 +3,17 @@
   bold: true
   url: https://github.com/l1jiahao
 
+# ---- 单细胞 / 图神经网络方向 ----
+"Fei Wang":
+  bold: false
+
 "Jiayi Dong":
+  bold: false
+
+"Xinyue Gu":
+  bold: false
+
+"Kongming Li":
   bold: false
 
 "Peng Ye":
@@ -15,5 +25,30 @@
 "Haohai Lu":
   bold: false
 
-"Fei Wang":
+# ---- 空间物理 / 传感器网络方向 ----
+"Yuhao Tao":
+  bold: false
+
+"Rongxin Tang":
+  bold: false
+
+"Kai Yuan":
+  bold: false
+
+"Zhiming Hu":
+  bold: false
+
+"Weichao Yan":
+  bold: false
+
+"Shiyun Liu":
+  bold: false
+
+"Zhou Chen":
+  bold: false
+
+"Xiaohua Deng":
+  bold: false
+
+"Haimeng Li":
   bold: false
