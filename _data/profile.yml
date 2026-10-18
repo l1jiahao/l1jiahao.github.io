@@ -3,8 +3,8 @@ secondary_name: ""
 navbar_name: "Li Jiahao"
 
 positions:
+- name: Researcher
 - name: Fudan University
-- name: Shanghai, China
 
 email: "argonli.ai@gmail.com"
 # cv_link: /assets/files/cv.pdf
@@ -33,5 +33,10 @@ short_bio: >-
 # portrait_caption: >-
 
 # ⚠️ education / experience / awards 需要真实信息才启用。
-#    启用前请先在 _data/display.yml 里把 show_experience 设为 true，
-#    并且每一项的 logo 必须是真实存在的图片路径，否则会显示裂图。
+#    每一项的 logo 必须是真实存在的图片路径，否则会显示裂图。
+#    ⚠️ 待核实：专业（dept）、起止年份，目前只写了毕业年份 2026
+education:
+- name: Fudan University
+  logo: /assets/images/badges/education.svg
+  position: M.S.
+  date: 2026

@@ -49,7 +49,8 @@
                 <hr />
                 <div class="row">
                     <div class="col">
-                        <a class="pr-3" href="mailto:{{ site.data.profile.email | encode_email }}">
+                        {%- assign _em = site.data.profile.email | split: "@" -%}
+                        <a class="pr-3" href="#" data-email-user="{{ _em[0] }}" data-email-domain="{{ _em[1] }}">
                             <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
                         </a>
 

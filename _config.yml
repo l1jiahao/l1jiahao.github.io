@@ -9,8 +9,9 @@ baseurl: ""   # user site lives at the domain root; must stay empty
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-email-protect
   - jekyll-sitemap
+# 注：模板原本的 jekyll-email-protect 不在 GitHub Pages 白名单，
+#     未知 filter 会被静默跳过（构建不报错、功能失效），已改用 assets/js/email.js
 
 timezone: Asia/Shanghai
 

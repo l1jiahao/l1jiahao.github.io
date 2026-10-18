@@ -1,5 +1,5 @@
 homepage:
-  show_experience: false        # 需要教育/获奖信息时改为 true，并补全 _data/profile.yml
+  show_experience: true
   show_news: true
   show_selected_publications: true
   num_news: 10

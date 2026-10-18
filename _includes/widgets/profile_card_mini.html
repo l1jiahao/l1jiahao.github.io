@@ -36,9 +36,8 @@
 
                 <div class="row small">
                     <div class="col text-center">
-                        <a class="email-text" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
-                        </a>
+                        {%- assign _em = site.data.profile.email | split: "@" -%}
+                        <a class="email-text" href="#" data-email-user="{{ _em[0] }}" data-email-domain="{{ _em[1] }}">email</a>
                     </div>
                 </div>
 
