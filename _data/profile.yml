@@ -42,13 +42,16 @@ short_bio: >-
 # portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-
 
-# ⚠️ 仍待补：专业名称（dept）、南昌大学的起止年份
+# ⚠️ 学位缩写用的是 B.S. / M.S.；国内计算机科学与技术通常发工学学位（B.Eng. / M.Eng.），
+#    要严格对应的话改 position 即可。
 education:
 - name: Fudan University
+  dept: Computer Science and Technology
   logo: /assets/images/badges/education.svg
   position: M.S.
-  date: 2026
+  date: 2023 – 2026
 - name: Nanchang University
+  dept: Computer Science and Technology
   logo: /assets/images/badges/education.svg
   position: B.S.
-  date: ""
+  date: 2019 – 2023
