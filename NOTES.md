@@ -89,15 +89,17 @@ python3 -m venv /tmp/venv && /tmp/venv/bin/pip install pymupdf Pillow
 不加 `--figure` 时会自动挑图注里含 framework / overview / architecture / pipeline 的那张。
 也可以 `--figure 1 --page 3` 精确定位。
 
-### 还差 3 篇
+### 还差 2 篇
 
 | 论文 | 情况 |
 |---|---|
-| scDiformer (BIBM 2025) | IEEE 付费墙，arXiv 无预印本 |
-| Deep learning in GRN inference: a survey (TCBB 2024) | IEEE 付费墙，仅 PubMed 摘要 |
-| Short-time prediction of energetic electron flux (Space Weather 2022) | Wiley 标注开放获取，但 Cloudflare 拦所有 PDF 路径 |
+| Deep learning in GRN inference: a survey (TCBB 2024) | IEEE 付费墙；PDF 在用户 Zotero 库里（`~/Zotero/storage` → Dropbox），当前进程被 macOS TCC 拦截无法读取 |
+| Short-time prediction of energetic electron flux (Space Weather 2022) | Wiley 拦所有 PDF 路径；用户本地有 PDF（`~/Downloads`），同样被 TCC 拦截 |
 
-这三篇目前用生成的矢量封面占位。拿到 PDF 后跑一次上面的命令即可替换。
+在终端里把这两个文件拷到 `~/Code/github_manager/pdfs/` 后即可提取（终端有 TCC 权限，agent 进程没有）。
+
+> scDiformer 的图来自用户提供的 `3-Figure1-1.png`，是宽幅四面板图，
+> 用 `--crop 0.34,0,1,1` 只取 panel c（Trajectory Encoder + Differential Decoder）才在缩略图尺寸下可读。
 
 ## 早期占位封面（已被上面替换的部分）
 
