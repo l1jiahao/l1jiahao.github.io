@@ -6,7 +6,7 @@ pub:            "Sensors"
 pub_date:       "2022"
 volume:           "22"
 number:           "14"
-pages:           "5179"
+pub_post:       ", Art. no. 5179"
 cover:          /assets/images/covers/wsn-sensors-2022.svg
 authors:
   - Jiahao Li

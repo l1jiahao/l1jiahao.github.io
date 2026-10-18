@@ -15,8 +15,8 @@
       <circle cx="224" cy="52" r="10" fill="#ffffff" fill-opacity="0.07" stroke="none"/>
     </g>
     <path d="M0 152 L300 108" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.2" fill="none"/>
-    <text x="22" y="126" font-family="Georgia, 'Times New Roman', serif" font-size="15"
-          letter-spacing="1.4" fill="#ffffff" fill-opacity="0.88">BIBM</text>
+    <text x="22" y="126" font-family="Helvetica, Arial, sans-serif" font-size="14"
+          letter-spacing="0.9" fill="#ffffff" fill-opacity="0.88">BIBM</text>
     <text x="20" y="176" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="700"
           fill="#ffffff" fill-opacity="0.95">2025</text>
   </g>
