@@ -16,4 +16,6 @@ authors:
   - Zhiming Hu
   - Weichao Yan
   - Shiyun Liu
+links:
+  Paper: https://doi.org/10.3390/s22145179
 ---

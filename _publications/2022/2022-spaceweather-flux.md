@@ -16,4 +16,6 @@ authors:
   - Zhou Chen
   - Xiaohua Deng
   - Haimeng Li
+links:
+  Paper: https://doi.org/10.1029/2021SW002969
 ---

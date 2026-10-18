@@ -12,4 +12,6 @@ authors:
   - Jiayi Dong
   - Jiahao Li
   - Fei Wang
+links:
+  Paper: https://doi.org/10.1109/BIBM66473.2025.11356605
 ---

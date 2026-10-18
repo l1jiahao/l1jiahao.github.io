@@ -14,4 +14,6 @@ authors:
   - Jiahao Li
   - Yuhao Tao
   - Fei Wang
+links:
+  Paper: https://doi.org/10.1093/bib/bbae171
 ---

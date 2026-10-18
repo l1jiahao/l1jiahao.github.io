@@ -10,4 +10,6 @@ authors:
   - Jiayi Dong
   - Jiahao Li
   - Fei Wang
+links:
+  Paper: https://doi.org/10.24963/ijcai.2025/822
 ---
