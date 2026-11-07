@@ -1,0 +1,29 @@
+<aside class="research-profile" aria-label="Profile and education">
+  <div class="identity">
+    <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.data.profile.primary_name }}</a>
+    <p class="profile-role">Embodied AI researcher</p>
+    <p class="profile-focus">WAM · Memory</p>
+  </div>
+  <div class="profile-links">
+    <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+    <a href="https://github.com/{{ site.data.profile.github }}">GitHub <span aria-hidden="true">↗</span></a>
+    {% if site.data.profile.cv_link %}<a href="{{ site.data.profile.cv_link | relative_url }}">CV <span aria-hidden="true">↗</span></a>{% endif %}
+    {% if site.data.profile.gscholar %}
+    {% if site.data.profile.gscholar contains 'scholar.google' %}{% assign scholar_url = site.data.profile.gscholar %}{% else %}{% assign scholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar %}{% endif %}
+    <a href="{{ scholar_url }}">Google Scholar <span aria-hidden="true">↗</span></a>
+    {% endif %}
+  </div>
+  <div class="profile-education">
+    <p class="eyebrow">Education</p>
+    {% for item in site.data.profile.education %}
+    <div class="education-item">
+      <span class="school-name">{{ item.name }}</span>
+      <span>{{ item.position }} <span aria-hidden="true">·</span> {{ item.date }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="profile-methods">
+    <p class="eyebrow">Methods &amp; interests</p>
+    <p>World–action models<br>Memory mechanisms<br>Diffusion models<br>Flow matching</p>
+  </div>
+</aside>

@@ -1,7 +1,7 @@
 ---
 title:          "Deep learning in gene regulatory network inference: a survey"
 date:           2024-01-01 00:00:00 +0800
-selected:       true
+selected:       false
 pub:            "IEEE/ACM Transactions on Computational Biology and Bioinformatics"
 pub_date:       "2024"
 volume:           "21"

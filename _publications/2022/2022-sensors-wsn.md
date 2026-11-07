@@ -1,7 +1,7 @@
 ---
 title:          "Fruchterman–Reingold hexagon empowered node deployment in wireless sensor network application"
 date:           2022-01-01 00:00:00 +0800
-selected:       true
+selected:       false
 pub:            "Sensors"
 pub_date:       "2022"
 volume:           "22"

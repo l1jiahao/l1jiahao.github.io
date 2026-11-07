@@ -1,6 +1,6 @@
-primary_name: "Li Jiahao"
+primary_name: "Jiahao Li"
 secondary_name: ""
-navbar_name: "Li Jiahao"
+navbar_name: "Jiahao Li"
 
 positions:
 - name: Embodied AI Researcher
@@ -18,7 +18,7 @@ short_bio_text_justify: false
 short_bio: >-
   <p>
     I work on <strong>embodied intelligence</strong>, with a focus on
-    <strong>memory in WAM</strong>.
+    <strong>memory in World–Action Models (WAMs)</strong> and native long-horizon training.
   </p>
   <p>
     During my master's, I worked on generative modeling for single-cell biology,

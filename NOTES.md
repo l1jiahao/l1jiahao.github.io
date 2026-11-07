@@ -11,23 +11,27 @@
 
 | 内容 | 文件 |
 |---|---|
-| 身份、邮箱、简介、学历 | `_data/profile.yml` |
-| 首页区块 | `_data/display.yml` |
-| 导航、作者 | `_data/navigation.yml`、`_data/authors.yml` |
+| 身份、邮箱、学历与可选 CV / Scholar | `_data/profile.yml` |
+| 首页简介、当前研究、联系区块 | `index.html` |
+| 公共布局、导航、SEO | `_layouts/research.html` |
+| 个人信息栏、响应式样式 | `_includes/research_profile.html`、`assets/css/research.css` |
+| 论文作者显示 | `_data/authors.yml` |
 | 论文 | `_publications/<年份>/*.md` |
 | 动态 | `_news/*.md` |
 
 ## 已完成
 
-- 全部 CSS、JS、字体存于 `assets/lib/`，页面不依赖海外 CDN 加载这些资源。
-- 邮箱由 `assets/js/email.js` 从两段属性拼接，替代 Pages 不支持的 `jekyll-email-protect`。
-  这是简单混淆，不是加密；公开源码中仍有邮箱。
+- 当前主页、论文页和 404 使用 `research` 布局，字体和 CSS 本地加载，不需要客户端 JavaScript。
+- 采用浅色背景、深绿强调色、衬线标题与紧凑侧栏。公开联系邮箱使用直接 mailto 链接，禁用 JS 也可用。
+- 原模板布局与组件仍保留；`_data/display.yml`、`_data/navigation.yml` 和 `short_bio` 仅供旧模板使用。
 - description、canonical、Open Graph 标签、sitemap 和 robots.txt 已配置。
 - 7 篇论文均已加入；6 篇使用 DOI，SAVE 使用 OpenReview、arXiv 和公开代码链接。
 - 7 张封面均已替换为论文方法图；GRN survey 和 Space Weather 已于 10 月 18 日完成。
 - 本科、硕士专业和年份已填充；本人于 11 月 7 日确认两者均为工学，使用 B.Eng. / M.Eng.。
-- 学历在左侧个人信息卡中简要展示学校、学位和年份，独立 Education 卡片已关闭；About Me 不重复学历。
-- 当前研究定位为具身智能中的 WAM 与记忆；个人卡片、About Me 和页面描述已同步。硕士与本科工作简述为过往经历，重点保留 diffusion models / flow matching 背景（本人于 11 月 7 日确认）。
+- 学历只在侧栏中简要展示学校、学位和年份；手机端与姓名信息并排显示。
+- 统一使用论文署名 Jiahao Li。当前研究为具身智能中的 WAM 记忆与原生长程训练（本人于 11 月 7 日确认可公开此方向）。
+- 当前工作已到代码实验与初步结果阶段、尚无正式论文；仅展示已确认的研究主题和阶段。主题插图为装饰，不是方法结构图或实验结果。
+- 首屏展示当前方向及 SAVE 一作 / ICLR 2026；首页只精选 SAVE 和 stDiff，全部 7 篇保留在论文页。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。
@@ -37,14 +41,15 @@
 | 年份 | 会议/期刊 | 简称 | 作者位次 | 首页精选 |
 |---|---|---|---|---|
 | 2026 | ICLR | SAVE | 一作 | 是 |
-| 2025 | IJCAI | Conditional causal representation learning | 二作 | 是 |
+| 2025 | IJCAI | Conditional causal representation learning | 二作 | 否 |
 | 2025 | BIBM | scDiformer | 三作 | 否 |
-| 2024 | IEEE/ACM TCBB | Deep learning in GRN inference: a survey | 二作 | 是 |
+| 2024 | IEEE/ACM TCBB | Deep learning in GRN inference: a survey | 二作 | 否 |
 | 2024 | Briefings in Bioinformatics | stDiff | 二作 | 是 |
-| 2022 | Sensors | FR-HEX node deployment | 一作 | 是 |
+| 2022 | Sensors | FR-HEX node deployment | 一作 | 否 |
 | 2022 | Space Weather | Energetic electron flux prediction | 三作 | 否 |
 
-首页选择由 `selected: true/false` 控制。`pages` 用于页码；文章编号使用
+首页选择由 `selected: true/false` 控制，用 `selected_order` 排序；精选项需填写
+`short_name`、`short_venue`、`author_role` 和 `featured_summary`。`pages` 用于页码；文章编号使用
 `pub_post: ", Art. no. ..."`。模板同时支持 volume、number 和 publisher。
 
 ## 封面

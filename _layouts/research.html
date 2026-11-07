@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_description = page.description | default: site.description %}
+  <title>{{ page.title }} · {{ site.data.profile.primary_name }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="author" content="{{ site.data.profile.primary_name }}">
+  <meta name="theme-color" content="#f8f9f5">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} · {{ site.data.profile.primary_name }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/monogram.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/fonts/fonts.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-width header-inner">
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.primary_name }} — home">JL<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/#research' | relative_url }}">Research</a>
+        <a href="{{ '/#selected-work' | relative_url }}" aria-label="Selected work"><span class="nav-full">Selected work</span><span class="nav-short">Work</span></a>
+        <a href="{{ '/publications' | relative_url }}" {% if page.navbar_title == 'Publications' %}aria-current="page"{% endif %}>Publications</a>
+        <a href="{{ '/#contact' | relative_url }}">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="site-width" tabindex="-1">{{ content }}</main>
+  <footer class="site-footer site-width">
+    <span>{{ site.data.profile.primary_name }} <span class="footer-dot">·</span> Updated {{ 'now' | date: '%b %Y' }}</span>
+    <span>Built on <a href="https://github.com/luost26/academic-homepage">academic-homepage</a></span>
+  </footer>
+</body>
+</html>

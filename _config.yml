@@ -1,8 +1,8 @@
 # Site settings
 # Template: https://github.com/luost26/academic-homepage
 
-title: "Li Jiahao"
-description: "Li Jiahao — embodied intelligence research, focusing on memory in WAM. Background in diffusion models and flow matching."
+title: "Jiahao Li"
+description: "Jiahao Li — memory in World–Action Models and native long-horizon training for embodied intelligence. Background in diffusion models and flow matching; first author of SAVE, ICLR 2026."
 url: "https://l1jiahao.github.io"
 baseurl: ""   # user site lives at the domain root; must stay empty
 
