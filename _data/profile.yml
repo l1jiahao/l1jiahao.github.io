@@ -34,7 +34,7 @@ short_bio: >-
     I started out on the physical side: short-time forecasting of radiation-belt electron flux
     with stacked ensembles, and hexagon-based node deployment for wireless sensor networks —
     both during my undergraduate years at <strong>Nanchang University</strong>. I completed my
-    M.S. at <strong>Fudan University</strong>, where I moved from forecasting physical fields
+    M.Eng. at <strong>Fudan University</strong>, where I moved from forecasting physical fields
     to modelling cellular ones.
   </p>
 
@@ -42,16 +42,15 @@ short_bio: >-
 # portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-
 
-# ⚠️ 学位缩写用的是 B.S. / M.S.；国内计算机科学与技术通常发工学学位（B.Eng. / M.Eng.），
-#    要严格对应的话改 position 即可。
+# 本科、硕士均为工学学位；本人确认于 2026-11-07。
 education:
 - name: Fudan University
   dept: Computer Science and Technology
   logo: /assets/images/badges/education.svg
-  position: M.S.
+  position: M.Eng.
   date: 2023 – 2026
 - name: Nanchang University
   dept: Computer Science and Technology
   logo: /assets/images/badges/education.svg
-  position: B.S.
+  position: B.Eng.
   date: 2019 – 2023

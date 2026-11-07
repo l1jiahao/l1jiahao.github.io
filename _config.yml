@@ -24,3 +24,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - NOTES.md
+  - scripts
+  - vendor
