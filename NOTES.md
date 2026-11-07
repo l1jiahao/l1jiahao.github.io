@@ -26,6 +26,7 @@
 - 7 篇论文均已加入；6 篇使用 DOI，SAVE 使用 OpenReview、arXiv 和公开代码链接。
 - 7 张封面均已替换为论文方法图；GRN survey 和 Space Weather 已于 10 月 18 日完成。
 - 本科、硕士专业和年份已填充；本人于 11 月 7 日确认两者均为工学，使用 B.Eng. / M.Eng.。
+- 学历在左侧个人信息卡中简要展示学校、学位和年份，独立 Education 卡片已关闭；About Me 不重复学历。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。

@@ -79,6 +79,16 @@
                         {% endif %}
                     </div>
                 </div>
+                {% if site.data.profile.education %}
+                <ul class="profile-education list-unstyled small text-center border-top pt-3 mt-2 mb-0" aria-label="Education">
+                    {% for item in site.data.profile.education %}
+                    <li>
+                        <div class="font-weight-bold">{{ item.name }}</div>
+                        <div class="text-muted">{{ item.position }} &middot; {{ item.date }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
         </div>
     </div>

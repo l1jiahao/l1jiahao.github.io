@@ -1,5 +1,5 @@
 homepage:
-  show_experience: true
+  show_experience: false  # 学历已收进左侧个人信息卡
   show_news: true
   show_selected_publications: true
   num_news: 10
