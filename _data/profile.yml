@@ -29,9 +29,8 @@ short_bio: >-
     and wireless sensor network deployment.
   </p>
 
-# 没有照片就先关掉；放照片时取消注释并把文件放到 assets/images/photos/
-# portrait_url: /assets/images/photos/portrait.jpg
-# portrait_caption: >-
+portrait_url: /assets/images/photos/jiahao-li-graduation.jpg
+portrait_caption: "Jiahao Li in graduation attire"
 
 # 本科、硕士均为工学学位；本人确认于 2026-11-07。
 education:

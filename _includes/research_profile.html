@@ -1,5 +1,6 @@
-<aside class="research-profile" aria-label="Profile and education">
+<aside class="research-profile{% if site.data.profile.portrait_url %} has-portrait{% endif %}" aria-label="Profile and education">
   <div class="identity">
+    {% if site.data.profile.portrait_url %}<img class="profile-portrait" src="{{ site.data.profile.portrait_url | relative_url }}" alt="{{ site.data.profile.portrait_caption | default: site.data.profile.primary_name | escape }}" width="768" height="768" decoding="async">{% endif %}
     <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.data.profile.primary_name }}</a>
     <p class="profile-role">Embodied AI researcher</p>
     <p class="profile-focus">WAM · Memory</p>
