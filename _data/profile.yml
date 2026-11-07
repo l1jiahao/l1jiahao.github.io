@@ -3,8 +3,8 @@ secondary_name: ""
 navbar_name: "Li Jiahao"
 
 positions:
-- name: Researcher
-- name: Fudan University
+- name: Embodied AI Researcher
+- name: WAM · Memory
 
 email: "argonli.ai@gmail.com"
 # cv_link: /assets/files/cv.pdf
@@ -17,22 +17,16 @@ github: l1jiahao
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I build <strong>generative models for scientific data</strong>, mostly single-cell biology.
-    My current work asks how to generate and forecast cells under conditions a model has never
-    seen: multi-condition generation with gene-block attention (SAVE, ICLR 2026), causal
-    representation learning for integrating heterogeneous scRNA-seq, and diffusion-based
-    imputation that recovers spatial context from dissociated cells (stDiff).
+    I work on <strong>embodied intelligence</strong>, with a focus on
+    <strong>memory in WAM</strong>.
   </p>
   <p>
-    What these share is a preference for <strong>structure over scale</strong>. Genes come in
-    coordinated blocks, cells sit in spatial neighbourhoods, and measurements unfold in time —
-    I would rather put that structure into the architecture than throw a bigger model at it.
-    That is also why I wrote a survey on deep learning for gene regulatory network inference
-    before building yet another network.
+    During my master's, I worked on generative modeling for single-cell biology,
+    building experience in <strong>diffusion models and flow matching</strong>.
   </p>
   <p>
-    Earlier, I worked on radiation-belt electron flux forecasting and node deployment
-    for wireless sensor networks.
+    My undergraduate research covered radiation-belt electron flux forecasting
+    and wireless sensor network deployment.
   </p>
 
 # 没有照片就先关掉；放照片时取消注释并把文件放到 assets/images/photos/
