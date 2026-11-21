@@ -8,6 +8,7 @@
   <div class="profile-links">
     <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
     <a href="https://github.com/{{ site.data.profile.github }}">GitHub <span aria-hidden="true">↗</span></a>
+    {% if site.data.profile.twitter %}<a href="https://x.com/{{ site.data.profile.twitter }}">X <span aria-hidden="true">↗</span></a>{% endif %}
     {% if site.data.profile.cv_link %}<a href="{{ site.data.profile.cv_link | relative_url }}">CV <span aria-hidden="true">↗</span></a>{% endif %}
     {% if site.data.profile.gscholar %}
     {% if site.data.profile.gscholar contains 'scholar.google' %}{% assign scholar_url = site.data.profile.gscholar %}{% else %}{% assign scholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar %}{% endif %}

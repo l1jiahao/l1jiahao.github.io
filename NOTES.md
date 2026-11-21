@@ -37,7 +37,7 @@
 - 统一使用论文署名 Jiahao Li。当前研究为具身智能中的 WAM 记忆与原生长程训练（本人于 11 月 7 日确认可公开此方向）。
 - 当前工作已到代码实验与初步结果阶段、尚无正式论文；结合 simulation、robotics benchmarks 与 RL post-training 开展研究与评测。主题插图为装饰，不是方法结构图或实验结果。
 - 首屏展示当前方向及 SAVE 一作 / ICLR 2026；首页只精选 SAVE 和 stDiff，全部 7 篇保留在论文页。
-- 2026-11-21 更新：首页新增 `03 / Technical focus` 行式列表（具身智能与生成建模技术栈），`Background` 顺延为 `04 / Background`；重写 SAVE 首页摘要突出 Latent VAE、OT flow matching 与 multi-condition CFG；为 `stDiff` 与 `IJCAI 2025`（`scConCRL`）补齐组织公开代码链接。
+- 2026-11-21 更新：首页新增 `03 / Technical focus` 行式列表（具身智能与生成建模技术栈），`Background` 顺延为 `04 / Background`；重写 SAVE 首页摘要突出 Latent VAE、OT flow matching 与 multi-condition CFG；为 `stDiff` 与 `IJCAI 2025`（`scConCRL`）补齐组织公开代码链接；侧栏与 `twitter:creator` meta 标签接入 X 账号 `@argonx12`。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。
