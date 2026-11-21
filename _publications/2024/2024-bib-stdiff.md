@@ -6,7 +6,7 @@ selected_order: 2
 short_name: stDiff
 short_venue: Briefings in Bioinformatics
 author_role: Second author
-featured_summary: "Diffusion-based imputation of spatial transcriptomics from single-cell data, connecting conditional generative modeling with spatial biological structure."
+featured_summary: "Conditional diffusion model for imputing spatial transcriptomics from single-cell data, connecting diffusion-based generative modeling with spatial structure."
 pub:            "Briefings in Bioinformatics"
 pub_date:       "2024"
 volume:           "25"
@@ -21,4 +21,5 @@ authors:
   - Fei Wang
 links:
   Paper: https://doi.org/10.1093/bib/bbae171
+  Code: https://github.com/fdu-wangfeilab/stDiff
 ---

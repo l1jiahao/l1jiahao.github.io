@@ -1,6 +1,6 @@
 # 学术主页维护
 
-更新于 2026-11-07。基于 luost26/academic-homepage（MIT）定制。
+更新于 2026-11-21。基于 luost26/academic-homepage（MIT）定制。
 
 - 线上：https://l1jiahao.github.io
 - 源码：`l1jiahao/l1jiahao.github.io`，本地 `site-luost26/`。
@@ -35,8 +35,9 @@
 - 学历只在侧栏中简要展示学校、学位和年份；手机端与联系信息并排显示。
 - 头像使用本人提供的毕业照，经普通裁剪和缩放导出为 768×768 JPEG，未做 AI 重绘。桌面端位于姓名上方，手机端与姓名并排；路径由 `portrait_url` 配置。
 - 统一使用论文署名 Jiahao Li。当前研究为具身智能中的 WAM 记忆与原生长程训练（本人于 11 月 7 日确认可公开此方向）。
-- 当前工作已到代码实验与初步结果阶段、尚无正式论文；仅展示已确认的研究主题和阶段。主题插图为装饰，不是方法结构图或实验结果。
+- 当前工作已到代码实验与初步结果阶段、尚无正式论文；结合 simulation、robotics benchmarks 与 RL post-training 开展研究与评测。主题插图为装饰，不是方法结构图或实验结果。
 - 首屏展示当前方向及 SAVE 一作 / ICLR 2026；首页只精选 SAVE 和 stDiff，全部 7 篇保留在论文页。
+- 2026-11-21 更新：首页新增 `03 / Technical focus` 行式列表（具身智能与生成建模技术栈），`Background` 顺延为 `04 / Background`；重写 SAVE 首页摘要突出 Latent VAE、OT flow matching 与 multi-condition CFG；为 `stDiff` 与 `IJCAI 2025`（`scConCRL`）补齐组织公开代码链接。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。

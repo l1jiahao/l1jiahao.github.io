@@ -9,8 +9,8 @@ navbar_title: Home
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> Embodied intelligence</p>
       <h1 id="hero-title">Memory for<br><em>embodied intelligence.</em></h1>
-      <p class="hero-intro">I study memory in <strong>World–Action Models (WAMs)</strong>, with a current focus on native long-horizon training.</p>
-      <p class="hero-background">My background is in <strong>diffusion models and flow matching</strong>, developed through research on generative modeling for single-cell biology.</p>
+      <p class="hero-intro">I study <strong>native long-horizon training</strong> and <strong>memory in World–Action Models (WAMs)</strong> for embodied intelligence.</p>
+      <p class="hero-background">My technical background combines <strong>flow matching, diffusion models, and latent VAEs</strong>—developed through generative modeling research—with <strong>simulation, robotics benchmarks, and RL post-training</strong>.</p>
       <div class="hero-actions">
         <a class="button button-primary" href="#research">Current research <span aria-hidden="true">↓</span></a>
         <a class="text-link" href="{{ '/publications' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
@@ -24,7 +24,7 @@ navbar_title: Home
         <div>
           <h2 id="research-title">Native long-horizon training</h2>
           <p class="research-subtitle">Memory in World–Action Models</p>
-          <p>I am exploring native long-horizon training in WAMs, with memory as the central research focus. The work has progressed through implementation and experiments to preliminary results.</p>
+          <p>I focus on native long-horizon training in World–Action Models, with memory as the central research axis. This work investigates how memory mechanisms and native long-horizon training interact over extended horizons, supported by simulation, robotics benchmarks, and RL post-training. The project has progressed through implementation and experiments to preliminary results.</p>
           <a class="research-contact" href="mailto:{{ site.data.profile.email }}?subject=WAM%20research">Discuss this research <span aria-hidden="true">↗</span></a>
         </div>
         <div class="memory-illustration" aria-hidden="true">
@@ -47,7 +47,7 @@ navbar_title: Home
 
     <section id="selected-work" class="selected-work" aria-labelledby="selected-title">
       <div class="section-heading"><div><p class="eyebrow">02 / Selected work</p><h2 id="selected-title">A foundation in generative models.</h2></div></div>
-      <p class="section-description">Selected work from my master's research at Fudan University.</p>
+      <p class="section-description">Generative modeling work from my master's research at Fudan University—building foundations in flow matching, diffusion models, and latent conditional generation.</p>
       {% assign selected_pubs = site.publications | where: 'selected', true | sort: 'selected_order' %}
       {% for item in selected_pubs %}
       <article class="featured-paper" id="work-{{ item.short_name | downcase }}">
@@ -64,8 +64,23 @@ navbar_title: Home
       <a class="text-link archive-link" href="{{ '/publications' | relative_url }}">View all {{ site.publications | size }} publications <span aria-hidden="true">→</span></a>
     </section>
 
+    <section id="technical-focus" class="technical-focus" aria-labelledby="focus-title">
+      <p class="eyebrow">03 / Technical focus</p>
+      <h2 id="focus-title">Embodied AI &amp; generative foundations.</h2>
+      <dl class="focus-list">
+        <div class="focus-row">
+          <dt>Embodied AI &amp; WAM</dt>
+          <dd>World–Action Models (WAMs) · Native long-horizon training · Long-horizon memory · Simulation &amp; robotics benchmarks · RL post-training</dd>
+        </div>
+        <div class="focus-row">
+          <dt>Generative modeling</dt>
+          <dd>Optimal-transport flow matching · Diffusion models · Latent VAEs · DiT &amp; block-structured attention · Multi-condition CFG</dd>
+        </div>
+      </dl>
+    </section>
+
     <section class="research-background" aria-labelledby="background-title">
-      <p class="eyebrow">03 / Background</p>
+      <p class="eyebrow">04 / Background</p>
       <h2 id="background-title">Earlier research.</h2>
       <p>My undergraduate research at Nanchang University covered radiation-belt electron flux forecasting and wireless sensor network deployment.</p>
     </section>
