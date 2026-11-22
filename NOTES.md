@@ -1,8 +1,8 @@
 # 学术主页维护
 
-更新于 2026-11-21。基于 luost26/academic-homepage（MIT）定制。
+更新于 2026-11-22。基于 luost26/academic-homepage（MIT）定制。
 
-- 线上：https://l1jiahao.github.io
+- 线上：https://argonx.dev（Cloudflare DNS 绑定自定义域名；原 https://l1jiahao.github.io 自动跳转）
 - 源码：`l1jiahao/l1jiahao.github.io`，本地 `site-luost26/`。
 - 部署：GitHub Pages 从 main 根目录原生构建；保留现有部署方式。
 - `../site/` 是早期静态草稿，不是线上源码。
@@ -38,6 +38,7 @@
 - 当前工作已到代码实验与初步结果阶段、尚无正式论文；结合 simulation、robotics benchmarks 与 RL post-training 开展研究与评测。主题插图为装饰，不是方法结构图或实验结果。
 - 首屏展示当前方向及 SAVE 一作 / ICLR 2026；首页只精选 SAVE 和 stDiff，全部 7 篇保留在论文页。
 - 2026-11-21 更新：首页新增 `03 / Technical focus` 行式列表（具身智能与生成建模技术栈），`Background` 顺延为 `04 / Background`；重写 SAVE 首页摘要突出 Latent VAE、OT flow matching 与 multi-condition CFG；为 `stDiff` 与 `IJCAI 2025`（`scConCRL`）补齐组织公开代码链接；侧栏与 `twitter:creator` meta 标签接入 X 账号 `@argonx12`。
+- 2026-11-22 更新：为学术主页绑定自定义域名 `argonx.dev`（新增 `CNAME`，更新 `_config.yml` 与 `robots.txt`；Cloudflare 侧配置 DNS-only 解析并在 GitHub Pages 开启强制 HTTPS）。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。
