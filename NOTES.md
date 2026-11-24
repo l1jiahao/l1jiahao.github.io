@@ -39,6 +39,7 @@
 - 首屏展示当前方向及 SAVE 一作 / ICLR 2026；首页只精选 SAVE 和 stDiff，全部 7 篇保留在论文页。
 - 2026-11-21 更新：首页新增 `03 / Technical focus` 行式列表（具身智能与生成建模技术栈），`Background` 顺延为 `04 / Background`；重写 SAVE 首页摘要突出 Latent VAE、OT flow matching 与 multi-condition CFG；为 `stDiff` 与 `IJCAI 2025`（`scConCRL`）补齐组织公开代码链接；侧栏与 `twitter:creator` meta 标签接入 X 账号 `@argonx12`。
 - 2026-11-22 更新：为学术主页绑定自定义域名 `argonx.dev`（新增 `CNAME`，更新 `_config.yml` 与 `robots.txt`；Cloudflare 侧配置 DNS-only 解析并在 GitHub Pages 开启强制 HTTPS）；并在 SAVE 论文条目补充独立项目页 `Project Page` 链接（`https://save.argonx.dev`）。
+- 2026-11-24 更新：SAVE v0.2.0 发布至 PyPI（`sc-save`），同步更新 SAVE 论文条目摘要及 `PyPI` 链接（`https://pypi.org/project/sc-save/`）。
 - SAVE 接收日及代码公开日尚未获得精确依据，动态只展示年份。
   `date_precision: year` 隐藏月日；`date: 2026-01-01` 仅用于年度分组。
   GitHub 的仓库创建时间不等于转为公开的时间。
